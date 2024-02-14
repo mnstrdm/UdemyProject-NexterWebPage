@@ -12,8 +12,10 @@
   background-position: center;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  //grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr; //resp
+  //grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content); //resp
   row-gap: 1.5rem;
   justify-content: center;
 
@@ -51,7 +53,9 @@
     gap: 3rem;
     justify-items: center;
     img {
-      height: 2.5rem;
+      //height: 2.5rem;
+      max-height: 2.5rem; // to be responsive
+      max-width: 100%; // to be responsive
       filter: brightness(70%);
     }
   }
